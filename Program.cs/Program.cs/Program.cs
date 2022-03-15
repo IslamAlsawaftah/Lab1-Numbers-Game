@@ -33,10 +33,7 @@ namespace Program.cs
             {
                 Console.WriteLine("Error caught: {0}", e);
             }
-            finally
-            {
-                Console.WriteLine("Program is complete.");
-            }
+         
         }
         static int[] Populate(int[] arr)
         {
@@ -102,7 +99,16 @@ namespace Program.cs
         }
         static void Main(string[] args)
         {
+            try {
             StartSequence();
+            } catch {
+                            Console.WriteLine("Something wrong happened " + e.Message);
+
+            }
+               finally
+            {
+                Console.WriteLine("Program is complete.");
+            }
         }
     }
 
