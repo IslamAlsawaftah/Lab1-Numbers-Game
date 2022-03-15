@@ -101,8 +101,8 @@ namespace Program.cs
         {
             try {
             StartSequence();
-            } catch {
-                            Console.WriteLine("Something wrong happened " + e.Message);
+            } catch (Exception e){
+                            Console.WriteLine("Something wrong happened " + e);
 
             }
                finally
